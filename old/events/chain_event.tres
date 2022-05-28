@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://old/events/scripts/chain_event.gd" type="Script" id=1]
+[ext_resource path="res://old/events/dialogue/chain_event_dialogue.tres" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Chain Event"
+active = false
+chance = 1.0
+oneshot = false
+dialogue = ExtResource( 2 )
+trigger_by_interaction = false
+on_object_name = ""
+trigger_by_time = false
+trigger_by_event = true

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://01_concrete/interactables/companion/events/001_1_sandbox/rules.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = ""
+active = false
+chance = 0.0
+oneshot = false
+trigger_by_interaction = false
+on_object_name = ""
+trigger_by_time = false
+trigger_by_event = false

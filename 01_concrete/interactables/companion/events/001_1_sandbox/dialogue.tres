@@ -1,0 +1,206 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+syntax_version = 2
+raw_text = "~ opening_1
+
+...
+..
+.
+It's a...
+It's a body pillow.
+What's a body pillow doing here?
+Body Pillow: a!
+You: aAA?!
+It made a noise!
+Body Pillow: oOoOOoh my gawd, it's a hooman!
+Body Pillow: i haven't seen hoomans in this room since forever
+H-Hooman?
+I'm just gonna..."
+errors = [  ]
+titles = {
+"opening_1": "2"
+}
+lines = {
+"0": {
+"next_id": "2",
+"text": "opening_1",
+"type": "title"
+},
+"10": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "11",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "It made a noise!",
+"time": null,
+"translation_key": "It made a noise!",
+"type": "dialogue"
+},
+"11": {
+"character": "Body Pillow",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "12",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "oOoOOoh my gawd, it's a hooman!",
+"time": null,
+"translation_key": "oOoOOoh my gawd, it's a hooman!",
+"type": "dialogue"
+},
+"12": {
+"character": "Body Pillow",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "13",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "i haven't seen hoomans in this room since forever",
+"time": null,
+"translation_key": "i haven't seen hoomans in this room since forever",
+"type": "dialogue"
+},
+"13": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "14",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "H-Hooman?",
+"time": null,
+"translation_key": "H-Hooman?",
+"type": "dialogue"
+},
+"14": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "I'm just gonna...",
+"time": null,
+"translation_key": "I'm just gonna...",
+"type": "dialogue"
+},
+"2": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "3",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...",
+"time": null,
+"translation_key": "...",
+"type": "dialogue"
+},
+"3": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "4",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "..",
+"time": null,
+"translation_key": "..",
+"type": "dialogue"
+},
+"4": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "5",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": ".",
+"time": null,
+"translation_key": ".",
+"type": "dialogue"
+},
+"5": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "6",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "It's a...",
+"time": null,
+"translation_key": "It's a...",
+"type": "dialogue"
+},
+"6": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "7",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "It's a body pillow.",
+"time": null,
+"translation_key": "It's a body pillow.",
+"type": "dialogue"
+},
+"7": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "8",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "What's a body pillow doing here?",
+"time": null,
+"translation_key": "What's a body pillow doing here?",
+"type": "dialogue"
+},
+"8": {
+"character": "Body Pillow",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "9",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "a!",
+"time": null,
+"translation_key": "a!",
+"type": "dialogue"
+},
+"9": {
+"character": "You",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "10",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "aAA?!",
+"time": null,
+"translation_key": "aAA?!",
+"type": "dialogue"
+}
+}

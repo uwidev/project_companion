@@ -1,0 +1,1197 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+syntax_version = 2
+raw_text = "~ 0_1
+# ~ opening
+# morning, bedroom
+...
+..
+.
+Morning...
+...
+..
+.
+It sounds like Mom is making breakfast.
+Mom: Ah!
+Mom: {{player_name}}!
+Mom: Good morning!
+Mom: Could you get some water from our well?
+Mom: I used the rest of it for breakfast already.
+Mom: Heh.
+Player: ...
+Player: Yes, Mom...!
+What to do?
+- Get the water
+# scene change outside house
+...
+..
+.
+We have a well outside of our house.
+Every morning we get the day's water from the well.
+It's usually enough to last me and my mom until nightfall, and a bit more.
+...
+..
+.
+Lately, I've been having this feeling of unease in my stomach...
+Mom says it's just a part of growing up, being 6 and all...
+But for some reason it just doesn't...
+# briefly show traveler observing
+...
+# travler walks off
+...?
+Strange man...
+I know we have merchants and travelers coming into town from time to time but...
+...
+..
+.
+That should be enough water.
+In back we go.
+# scene go back home, kitchen
+...
+..
+.
+Player: I got the water, Mom!
+Mom: Thanks honey.
+Mom: Breakfast is already on the table.
+Mom: I'll be leaving the house pretty soon for work.
+Mom: You know when you need to be back home by.
+Player: Before the sun goes away!
+Mom: Got that right!
+Mom: And of course, make sure you stick together with your friends.
+Mom: Today is Saturday after all.
+Mom: We get typically get merchants and adventurers coming to town for the [b]Weekend Market[/b].
+Mom: Not everyone's here just to make monies, unfortunately.
+Mom: ...
+Player: ...
+Mom: ...
+Mom: How are you feeling today?
+Player: The same as usual.
+Mom: As in, before you started feeling weird, or nothing has changed?
+Player: Nothing changed... yet.
+Mom: ...
+She let out a gentle sigh.
+Player: Hey Mom.
+Player: One of my friends told me that it might be something about a [b]collapse[/b]?
+Player: Do you know anything?
+Mom: Well...
+Mom: ...
+Mom: It's too early to tell...
+Mom: You've only been experiencing this for a few months now so...
+Mom: As far as I can tell now, it's nothing serious!
+She stuffed the rest of the food in her mouth.
+...
+..
+.
+Mom: I need to go now, I'll be late otherwise.
+Player: Bye Mom!
+Mom: I'll be back at the house a bit after noon.
+Mom: Stay safe!
+And with that, she hurried on off.
+Player: Alrighty... what to do today...
+- Go play with my friends"
+errors = [  ]
+titles = {
+"0_1": "3"
+}
+lines = {
+"0": {
+"next_id": "3",
+"text": "0_1",
+"type": "title"
+},
+"10": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "11",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "It sounds like Mom is making breakfast.",
+"time": null,
+"translation_key": "It sounds like Mom is making breakfast.",
+"type": "dialogue"
+},
+"11": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "12",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Ah!",
+"time": null,
+"translation_key": "Ah!",
+"type": "dialogue"
+},
+"12": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "13",
+"pauses": {
+},
+"replacements": [ {
+"expression": [ {
+"type": "variable",
+"value": "player_name"
+} ],
+"value_in_text": "{{player_name}}"
+} ],
+"speeds": [  ],
+"text": "{{player_name}}!",
+"time": null,
+"translation_key": "{{player_name}}!",
+"type": "dialogue"
+},
+"13": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "14",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Good morning!",
+"time": null,
+"translation_key": "Good morning!",
+"type": "dialogue"
+},
+"14": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "15",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Could you get some water from our well?",
+"time": null,
+"translation_key": "Could you get some water from our well?",
+"type": "dialogue"
+},
+"15": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "16",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "I used the rest of it for breakfast already.",
+"time": null,
+"translation_key": "I used the rest of it for breakfast already.",
+"type": "dialogue"
+},
+"16": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "17",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Heh.",
+"time": null,
+"translation_key": "Heh.",
+"type": "dialogue"
+},
+"17": {
+"character": "Player",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "18",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...",
+"time": null,
+"translation_key": "...",
+"type": "dialogue"
+},
+"18": {
+"character": "Player",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "19",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Yes, Mom...!",
+"time": null,
+"translation_key": "Yes, Mom...!",
+"type": "dialogue"
+},
+"19": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "20",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "What to do?",
+"time": null,
+"translation_key": "What to do?",
+"type": "dialogue"
+},
+"20": {
+"next_id": "22",
+"next_id_after": "22",
+"replacements": [  ],
+"responses": PoolStringArray( "20" ),
+"text": "Get the water",
+"translation_key": "Get the water",
+"type": "response"
+},
+"22": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "23",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...",
+"time": null,
+"translation_key": "...",
+"type": "dialogue"
+},
+"23": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "24",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "..",
+"time": null,
+"translation_key": "..",
+"type": "dialogue"
+},
+"24": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "25",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": ".",
+"time": null,
+"translation_key": ".",
+"type": "dialogue"
+},
+"25": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "26",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "We have a well outside of our house.",
+"time": null,
+"translation_key": "We have a well outside of our house.",
+"type": "dialogue"
+},
+"26": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "27",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Every morning we get the day's water from the well.",
+"time": null,
+"translation_key": "Every morning we get the day's water from the well.",
+"type": "dialogue"
+},
+"27": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "28",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "It's usually enough to last me and my mom until nightfall, and a bit more.",
+"time": null,
+"translation_key": "It's usually enough to last me and my mom until nightfall, and a bit more.",
+"type": "dialogue"
+},
+"28": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "29",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...",
+"time": null,
+"translation_key": "...",
+"type": "dialogue"
+},
+"29": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "30",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "..",
+"time": null,
+"translation_key": "..",
+"type": "dialogue"
+},
+"3": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "4",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...",
+"time": null,
+"translation_key": "...",
+"type": "dialogue"
+},
+"30": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "31",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": ".",
+"time": null,
+"translation_key": ".",
+"type": "dialogue"
+},
+"31": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "32",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Lately, I've been having this feeling of unease in my stomach...",
+"time": null,
+"translation_key": "Lately, I've been having this feeling of unease in my stomach...",
+"type": "dialogue"
+},
+"32": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "33",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Mom says it's just a part of growing up, being 6 and all...",
+"time": null,
+"translation_key": "Mom says it's just a part of growing up, being 6 and all...",
+"type": "dialogue"
+},
+"33": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "35",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "But for some reason it just doesn't...",
+"time": null,
+"translation_key": "But for some reason it just doesn't...",
+"type": "dialogue"
+},
+"35": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "37",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...",
+"time": null,
+"translation_key": "...",
+"type": "dialogue"
+},
+"37": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "38",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...?",
+"time": null,
+"translation_key": "...?",
+"type": "dialogue"
+},
+"38": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "39",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Strange man...",
+"time": null,
+"translation_key": "Strange man...",
+"type": "dialogue"
+},
+"39": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "40",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "I know we have merchants and travelers coming into town from time to time but...",
+"time": null,
+"translation_key": "I know we have merchants and travelers coming into town from time to time but...",
+"type": "dialogue"
+},
+"4": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "5",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "..",
+"time": null,
+"translation_key": "..",
+"type": "dialogue"
+},
+"40": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "41",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...",
+"time": null,
+"translation_key": "...",
+"type": "dialogue"
+},
+"41": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "42",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "..",
+"time": null,
+"translation_key": "..",
+"type": "dialogue"
+},
+"42": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "43",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": ".",
+"time": null,
+"translation_key": ".",
+"type": "dialogue"
+},
+"43": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "44",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "That should be enough water.",
+"time": null,
+"translation_key": "That should be enough water.",
+"type": "dialogue"
+},
+"44": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "46",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "In back we go.",
+"time": null,
+"translation_key": "In back we go.",
+"type": "dialogue"
+},
+"46": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "47",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...",
+"time": null,
+"translation_key": "...",
+"type": "dialogue"
+},
+"47": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "48",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "..",
+"time": null,
+"translation_key": "..",
+"type": "dialogue"
+},
+"48": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "49",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": ".",
+"time": null,
+"translation_key": ".",
+"type": "dialogue"
+},
+"49": {
+"character": "Player",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "50",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "I got the water, Mom!",
+"time": null,
+"translation_key": "I got the water, Mom!",
+"type": "dialogue"
+},
+"5": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "6",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": ".",
+"time": null,
+"translation_key": ".",
+"type": "dialogue"
+},
+"50": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "51",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Thanks honey.",
+"time": null,
+"translation_key": "Thanks honey.",
+"type": "dialogue"
+},
+"51": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "52",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Breakfast is already on the table.",
+"time": null,
+"translation_key": "Breakfast is already on the table.",
+"type": "dialogue"
+},
+"52": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "53",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "I'll be leaving the house pretty soon for work.",
+"time": null,
+"translation_key": "I'll be leaving the house pretty soon for work.",
+"type": "dialogue"
+},
+"53": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "54",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "You know when you need to be back home by.",
+"time": null,
+"translation_key": "You know when you need to be back home by.",
+"type": "dialogue"
+},
+"54": {
+"character": "Player",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "55",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Before the sun goes away!",
+"time": null,
+"translation_key": "Before the sun goes away!",
+"type": "dialogue"
+},
+"55": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "56",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Got that right!",
+"time": null,
+"translation_key": "Got that right!",
+"type": "dialogue"
+},
+"56": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "57",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "And of course, make sure you stick together with your friends.",
+"time": null,
+"translation_key": "And of course, make sure you stick together with your friends.",
+"type": "dialogue"
+},
+"57": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "58",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Today is Saturday after all.",
+"time": null,
+"translation_key": "Today is Saturday after all.",
+"type": "dialogue"
+},
+"58": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "59",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "We get typically get merchants and adventurers coming to town for the [b]Weekend Market[/b].",
+"time": null,
+"translation_key": "We get typically get merchants and adventurers coming to town for the [b]Weekend Market[/b].",
+"type": "dialogue"
+},
+"59": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "60",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Not everyone's here just to make monies, unfortunately.",
+"time": null,
+"translation_key": "Not everyone's here just to make monies, unfortunately.",
+"type": "dialogue"
+},
+"6": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "7",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Morning...",
+"time": null,
+"translation_key": "Morning...",
+"type": "dialogue"
+},
+"60": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "61",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...",
+"time": null,
+"translation_key": "...",
+"type": "dialogue"
+},
+"61": {
+"character": "Player",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "62",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...",
+"time": null,
+"translation_key": "...",
+"type": "dialogue"
+},
+"62": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "63",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...",
+"time": null,
+"translation_key": "...",
+"type": "dialogue"
+},
+"63": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "64",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "How are you feeling today?",
+"time": null,
+"translation_key": "How are you feeling today?",
+"type": "dialogue"
+},
+"64": {
+"character": "Player",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "65",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "The same as usual.",
+"time": null,
+"translation_key": "The same as usual.",
+"type": "dialogue"
+},
+"65": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "66",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "As in, before you started feeling weird, or nothing has changed?",
+"time": null,
+"translation_key": "As in, before you started feeling weird, or nothing has changed?",
+"type": "dialogue"
+},
+"66": {
+"character": "Player",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "67",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Nothing changed... yet.",
+"time": null,
+"translation_key": "Nothing changed... yet.",
+"type": "dialogue"
+},
+"67": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "68",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...",
+"time": null,
+"translation_key": "...",
+"type": "dialogue"
+},
+"68": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "69",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "She let out a gentle sigh.",
+"time": null,
+"translation_key": "She let out a gentle sigh.",
+"type": "dialogue"
+},
+"69": {
+"character": "Player",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "70",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Hey Mom.",
+"time": null,
+"translation_key": "Hey Mom.",
+"type": "dialogue"
+},
+"7": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "8",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...",
+"time": null,
+"translation_key": "...",
+"type": "dialogue"
+},
+"70": {
+"character": "Player",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "71",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "One of my friends told me that it might be something about a [b]collapse[/b]?",
+"time": null,
+"translation_key": "One of my friends told me that it might be something about a [b]collapse[/b]?",
+"type": "dialogue"
+},
+"71": {
+"character": "Player",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "72",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Do you know anything?",
+"time": null,
+"translation_key": "Do you know anything?",
+"type": "dialogue"
+},
+"72": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "73",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Well...",
+"time": null,
+"translation_key": "Well...",
+"type": "dialogue"
+},
+"73": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "74",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...",
+"time": null,
+"translation_key": "...",
+"type": "dialogue"
+},
+"74": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "75",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "It's too early to tell...",
+"time": null,
+"translation_key": "It's too early to tell...",
+"type": "dialogue"
+},
+"75": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "76",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "You've only been experiencing this for a few months now so...",
+"time": null,
+"translation_key": "You've only been experiencing this for a few months now so...",
+"type": "dialogue"
+},
+"76": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "77",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "As far as I can tell now, it's nothing serious!",
+"time": null,
+"translation_key": "As far as I can tell now, it's nothing serious!",
+"type": "dialogue"
+},
+"77": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "78",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "She stuffed the rest of the food in her mouth.",
+"time": null,
+"translation_key": "She stuffed the rest of the food in her mouth.",
+"type": "dialogue"
+},
+"78": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "79",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...",
+"time": null,
+"translation_key": "...",
+"type": "dialogue"
+},
+"79": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "80",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "..",
+"time": null,
+"translation_key": "..",
+"type": "dialogue"
+},
+"8": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "9",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "..",
+"time": null,
+"translation_key": "..",
+"type": "dialogue"
+},
+"80": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "81",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": ".",
+"time": null,
+"translation_key": ".",
+"type": "dialogue"
+},
+"81": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "82",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "I need to go now, I'll be late otherwise.",
+"time": null,
+"translation_key": "I need to go now, I'll be late otherwise.",
+"type": "dialogue"
+},
+"82": {
+"character": "Player",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "83",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Bye Mom!",
+"time": null,
+"translation_key": "Bye Mom!",
+"type": "dialogue"
+},
+"83": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "84",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "I'll be back at the house a bit after noon.",
+"time": null,
+"translation_key": "I'll be back at the house a bit after noon.",
+"type": "dialogue"
+},
+"84": {
+"character": "Mom",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "85",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Stay safe!",
+"time": null,
+"translation_key": "Stay safe!",
+"type": "dialogue"
+},
+"85": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "86",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "And with that, she hurried on off.",
+"time": null,
+"translation_key": "And with that, she hurried on off.",
+"type": "dialogue"
+},
+"86": {
+"character": "Player",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "87",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Alrighty... what to do today...",
+"time": null,
+"translation_key": "Alrighty... what to do today...",
+"type": "dialogue"
+},
+"87": {
+"next_id": "",
+"next_id_after": "end",
+"replacements": [  ],
+"responses": PoolStringArray( "87" ),
+"text": "Go play with my friends",
+"translation_key": "Go play with my friends",
+"type": "response"
+},
+"9": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "10",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": ".",
+"time": null,
+"translation_key": ".",
+"type": "dialogue"
+}
+}

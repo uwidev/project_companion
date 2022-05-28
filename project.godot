@@ -1,0 +1,90 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Resource",
+"class": "CharacterResource",
+"language": "GDScript",
+"path": "res://old/cg/char/CharacterResource.gd"
+}, {
+"base": "Resource",
+"class": "DialogueResource",
+"language": "GDScript",
+"path": "res://addons/dialogue_manager/dialogue_resource.gd"
+}, {
+"base": "Node",
+"class": "Entity",
+"language": "GDScript",
+"path": "res://00_generic/entity.gd"
+}, {
+"base": "Resource",
+"class": "EventResource",
+"language": "GDScript",
+"path": "res://00_generic/event.gd"
+}, {
+"base": "Node2D",
+"class": "Interactable",
+"language": "GDScript",
+"path": "res://00_generic/interactable.gd"
+}, {
+"base": "Node",
+"class": "Location",
+"language": "GDScript",
+"path": "res://00_generic/location.gd"
+} ]
+_global_script_class_icons={
+"CharacterResource": "",
+"DialogueResource": "",
+"Entity": "",
+"EventResource": "",
+"Interactable": "",
+"Location": ""
+}
+
+[application]
+
+config/name="Project Companion PoC"
+run/main_scene="res://01_concrete/scenes/sandbox.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+ResourceDB="*res://02_globals/resource_db.gd"
+EventManager="*res://02_globals/event_manager.gd"
+EventDB="*res://02_globals/event_db.gd"
+CGManager="*res://02_globals/cg_manager.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+WorldState="*res://02_globals/world_state.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/size/resizable=false
+window/size/test_width=640
+window/size/test_height=360
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg" )
+
+[input]
+
+accent={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[physics]
+
+common/enable_pause_aware_picking=true

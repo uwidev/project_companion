@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://00_generic/location.gd" type="Script" id=1]
+[ext_resource path="res://01_concrete/entities/companion/companion.tscn" type="PackedScene" id=2]
+[ext_resource path="res://01_concrete/locations/white_bg.png" type="Texture" id=3]
+
+[node name="test_location" type="Node"]
+script = ExtResource( 1 )
+background = ExtResource( 3 )
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+offset = Vector2( 640, 360 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Objects" type="Node" parent="."]
+
+[node name="Companion" parent="Objects" instance=ExtResource( 2 )]
+position = Vector2( 341, 439 )
