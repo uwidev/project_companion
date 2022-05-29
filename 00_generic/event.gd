@@ -26,26 +26,14 @@ signal event_finished
 
 export var name : String
 export var active : bool
-export var chance : float
-export var oneshot : bool
 
 export var dialogue : Resource
-
-export var trigger_by_interaction : bool
-export var by_object : PackedScene
-export var trigger_by_time : bool
-export var trigger_by_event : bool
-
-var fire := true
+export var rules : Script
 
 
 func _init():
 	yield(EventManager, "ready")
 	connect("event_finished", EventManager, "on_successful_event")
-	
-#	if trigger_by_interaction:
-#		if on_object_name == null:
-#			assert(false, 'Event "%s" must have "On Object Name" defined when "Trigger By Interaction" is true.' % name)
 
 
 func trigger(ctx:Array):
@@ -55,7 +43,6 @@ func trigger(ctx:Array):
 		_after_trigger(ctx)
 	ctx.append(name)
 
-#	connect("event_finished", EventManager, "on_successful_event")
 	emit_signal("event_finished", ctx)
 	
 func can_trigger_from(ctx:Array) -> bool:

@@ -9,6 +9,7 @@ extends Node
 
 
 export var is_player := false
+var seen : Array
 
 
 func move_to(location):
@@ -28,3 +29,10 @@ func move_to(location):
 
 func interact_with(other):
 	pass
+
+func add_seen(ev:String):
+	seen.append(ev.hash())
+	
+func has_seen(ev) -> bool:
+	var ev_ = ev.hash()
+	return ev_ in seen

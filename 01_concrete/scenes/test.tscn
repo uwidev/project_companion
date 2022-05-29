@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node
+
+func _persist(ctx):
+	print(\"Checking conditions on 1\")
+	return true
+"
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Node
+
+func _persist(ctx):
+	print(\"Checking conditions on 2\")
+	return get_parent()._persist(ctx)
+"
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends Node
+
+
+func _ready():
+	print(_persist(\"some context\"))
+
+
+func _persist(ctx):
+	print(\"Checking conditions on 3\")
+	return get_parent()._persist(ctx)
+"
+
+[node name="Head" type="Node"]
+script = SubResource( 1 )
+
+[node name="1" type="Node" parent="."]
+script = SubResource( 2 )
+
+[node name="2" type="Node" parent="1"]
+script = SubResource( 3 )

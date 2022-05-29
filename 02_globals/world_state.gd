@@ -1,4 +1,5 @@
 extends Node
+# Manages time
 
 
 signal phase_advanced
@@ -8,6 +9,8 @@ export var max_phase : int = 3
 
 var day : int
 var time : int
+
+var node_1 : Node
 
 
 func _ready():

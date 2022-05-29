@@ -1,6 +1,10 @@
 class_name Interactable
 extends Node2D
 # A thing that can be interacted with.
+#
+# Has an array events that references the various events that are to be
+# triggered from this intereaction.
+
 
 signal interacted
 
