@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/companion.png-fba74ec4168b561ad4db489c21be87e7.stex"
+path="res://.import/companion.png-12b4047db40bc4d2028c1be66b8c1452.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://01_concrete/interactables/companion/companion.png"
-dest_files=[ "res://.import/companion.png-fba74ec4168b561ad4db489c21be87e7.stex" ]
+source_file="res://01_concrete/entities/pillow/companion.png"
+dest_files=[ "res://.import/companion.png-12b4047db40bc4d2028c1be66b8c1452.stex" ]
 
 [params]
 

@@ -1,4 +1,3 @@
-class_name EventRules
 extends Resource
 
 func _can_trigger_from(ctx:Array) -> bool:

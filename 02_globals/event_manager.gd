@@ -15,56 +15,47 @@ extends Node
 # May need to create an entirely new class ctx.
 
 
-func on_successful_interaction(ctx:Array):
-	# All entities must connect to this function.
-	#
-	# catches signals "interacted" from interactables
-	var events = ctx.back().events
-	var event : EventResource 
-	
-	for ev in events:
-		event = ev
-		if ev.can_trigger_from(ctx):
-			break
-	
-#	var event : EventResource = _pop_interaction_event(ctx)
-	if event != null:
-		event.trigger(ctx)
+# Variables
+var processing_events = false
 
+
+# Public
 func on_successful_event(ctx:Array):
 	# To allow events to occur after events.
 	#
 	# cataches "event_finished" from events
-	var event : EventResource = _pop_event_event(ctx)
-	if event != null:
-		event.trigger(ctx)
-	pass
+	if !processing_events:
+		processing_events = true
+		var event_queue = []
+		
+		event_queue.append_array(_get_valid_events(ctx))
+
+		while !event_queue.empty():
+			event_queue.shuffle() # shuffle for more random fun!
+			event_queue.sort_custom(self, "_event_priority_cmp")
+			for e in event_queue:
+				print(e.get_priority(), " ", e.get_full_name())
+			
+			var ev = event_queue.pop_front()
+			
+			ev.trigger(ctx)
+			ctx = yield(ev, "event_finished")
+
+			event_queue.append_array(_get_valid_events(ctx))
+
+		processing_events = false
 
 
-#func _pop_interaction_event(ctx:Array):
-#	var ret
-#
-##	print(EventDB.EventDB["Interaction"])
-##	if !(ctx[1] in EventDB.EventDB["Interaction"]):
-##		print("No interaction event for %s exists." % ctx[1])
-##		return
-#
-#	var interaction_list : Array = EventDB.EventDB["Interaction"][ctx[1]]
-#	for event in interaction_list:
-#		var ev : EventResource = event
-#		if ev.can_trigger_from(ctx):
-#			ret = ev
-#			break
-#
-#	return ret
-
-func _pop_event_event(ctx:Array):
-	var ret
+# Private
+func _get_valid_events(ctx:Array) -> Array:
+	var ret = []
 	
-	var event_list : Array = EventDB.EventDB["Event"]
-	for ev in event_list:
-		if ev.can_trigger_from(ctx):
-			ret = ev
-			break
-	
+	for event in EventDB.db["event"]:
+		var ev = event.get_valid_event(ctx)
+		if ev:
+			ret.append(ev)
+			
 	return ret
+
+func _event_priority_cmp(a, b):
+	return a.get_priority() > b.get_priority()

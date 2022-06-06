@@ -24,16 +24,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://00_generic/entity.gd"
 }, {
-"base": "Resource",
-"class": "EventResource",
-"language": "GDScript",
-"path": "res://00_generic/event.gd"
-}, {
-"base": "Reference",
-"class": "EventRules",
-"language": "GDScript",
-"path": "res://00_generic/event_rules.gd"
-}, {
 "base": "Node2D",
 "class": "Interactable",
 "language": "GDScript",
@@ -43,15 +33,25 @@ _global_script_classes=[ {
 "class": "Location",
 "language": "GDScript",
 "path": "res://00_generic/location.gd"
+}, {
+"base": "Node",
+"class": "NodeEvent",
+"language": "GDScript",
+"path": "res://00_generic/node_event.gd"
+}, {
+"base": "Node",
+"class": "NodeEventRoot",
+"language": "GDScript",
+"path": "res://00_generic/node_event_root.gd"
 } ]
 _global_script_class_icons={
 "CharacterResource": "",
 "DialogueResource": "",
 "Entity": "",
-"EventResource": "",
-"EventRules": "",
 "Interactable": "",
-"Location": ""
+"Location": "",
+"NodeEvent": "",
+"NodeEventRoot": ""
 }
 
 [application]
@@ -68,6 +68,7 @@ EventDB="*res://02_globals/event_db.gd"
 CGManager="*res://02_globals/cg_manager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 WorldState="*res://02_globals/world_state.gd"
+Utility="*res://02_globals/utility.gd"
 
 [display]
 

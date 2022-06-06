@@ -31,7 +31,7 @@ func interact_with(other):
 	pass
 
 func add_seen(ev:String):
-	seen.append(ev.hash())
+	seen.append(ev)
 	
 func has_seen(ev) -> bool:
 	var ev_ = ev.hash()

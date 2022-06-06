@@ -1,0 +1,4 @@
+series,sequence,trigger_by,from,with,cond
+opening,1,interaction,player,pillow,not seen
+opening,END,interaction,player,pillow,"not seen, seen opening_1"
+interjection,END,event,player,pillow,just seen opening_1

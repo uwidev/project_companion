@@ -7,6 +7,10 @@ script = ExtResource( 1 )
 syntax_version = 2
 raw_text = "~ main
 
+PRIORITY
+
+~ main_old
+
 ...
 ..
 .
@@ -22,7 +26,8 @@ H-Hooman?
 I'm just gonna..."
 errors = [  ]
 titles = {
-"main": "2"
+"main": "2",
+"main_old": "6"
 }
 lines = {
 "0": {
@@ -38,23 +43,22 @@ lines = {
 },
 "replacements": [  ],
 "speeds": [  ],
-"text": "It made a noise!",
+"text": "It's a body pillow.",
 "time": null,
-"translation_key": "It made a noise!",
+"translation_key": "It's a body pillow.",
 "type": "dialogue"
 },
 "11": {
-"character": "Body Pillow",
-"character_replacements": [  ],
+"character": "",
 "inline_mutations": [  ],
 "next_id": "12",
 "pauses": {
 },
 "replacements": [  ],
 "speeds": [  ],
-"text": "oOoOOoh my gawd, it's a hooman!",
+"text": "What's a body pillow doing here?",
 "time": null,
-"translation_key": "oOoOOoh my gawd, it's a hooman!",
+"translation_key": "What's a body pillow doing here?",
 "type": "dialogue"
 },
 "12": {
@@ -66,15 +70,70 @@ lines = {
 },
 "replacements": [  ],
 "speeds": [  ],
+"text": "a!",
+"time": null,
+"translation_key": "a!",
+"type": "dialogue"
+},
+"13": {
+"character": "You",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "14",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "aAA?!",
+"time": null,
+"translation_key": "aAA?!",
+"type": "dialogue"
+},
+"14": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "15",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "It made a noise!",
+"time": null,
+"translation_key": "It made a noise!",
+"type": "dialogue"
+},
+"15": {
+"character": "Body Pillow",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "16",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "oOoOOoh my gawd, it's a hooman!",
+"time": null,
+"translation_key": "oOoOOoh my gawd, it's a hooman!",
+"type": "dialogue"
+},
+"16": {
+"character": "Body Pillow",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "17",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
 "text": "i haven't seen hoomans in this room since forever",
 "time": null,
 "translation_key": "i haven't seen hoomans in this room since forever",
 "type": "dialogue"
 },
-"13": {
+"17": {
 "character": "",
 "inline_mutations": [  ],
-"next_id": "14",
+"next_id": "18",
 "pauses": {
 },
 "replacements": [  ],
@@ -84,7 +143,7 @@ lines = {
 "translation_key": "H-Hooman?",
 "type": "dialogue"
 },
-"14": {
+"18": {
 "character": "",
 "inline_mutations": [  ],
 "next_id": "",
@@ -100,54 +159,20 @@ lines = {
 "2": {
 "character": "",
 "inline_mutations": [  ],
-"next_id": "3",
+"next_id": "end",
 "pauses": {
 },
 "replacements": [  ],
 "speeds": [  ],
-"text": "...",
+"text": "PRIORITY",
 "time": null,
-"translation_key": "...",
-"type": "dialogue"
-},
-"3": {
-"character": "",
-"inline_mutations": [  ],
-"next_id": "4",
-"pauses": {
-},
-"replacements": [  ],
-"speeds": [  ],
-"text": "..",
-"time": null,
-"translation_key": "..",
+"translation_key": "PRIORITY",
 "type": "dialogue"
 },
 "4": {
-"character": "",
-"inline_mutations": [  ],
-"next_id": "5",
-"pauses": {
-},
-"replacements": [  ],
-"speeds": [  ],
-"text": ".",
-"time": null,
-"translation_key": ".",
-"type": "dialogue"
-},
-"5": {
-"character": "",
-"inline_mutations": [  ],
 "next_id": "6",
-"pauses": {
-},
-"replacements": [  ],
-"speeds": [  ],
-"text": "It's a...",
-"time": null,
-"translation_key": "It's a...",
-"type": "dialogue"
+"text": "main_old",
+"type": "title"
 },
 "6": {
 "character": "",
@@ -157,9 +182,9 @@ lines = {
 },
 "replacements": [  ],
 "speeds": [  ],
-"text": "It's a body pillow.",
+"text": "...",
 "time": null,
-"translation_key": "It's a body pillow.",
+"translation_key": "...",
 "type": "dialogue"
 },
 "7": {
@@ -170,37 +195,35 @@ lines = {
 },
 "replacements": [  ],
 "speeds": [  ],
-"text": "What's a body pillow doing here?",
+"text": "..",
 "time": null,
-"translation_key": "What's a body pillow doing here?",
+"translation_key": "..",
 "type": "dialogue"
 },
 "8": {
-"character": "Body Pillow",
-"character_replacements": [  ],
+"character": "",
 "inline_mutations": [  ],
 "next_id": "9",
 "pauses": {
 },
 "replacements": [  ],
 "speeds": [  ],
-"text": "a!",
+"text": ".",
 "time": null,
-"translation_key": "a!",
+"translation_key": ".",
 "type": "dialogue"
 },
 "9": {
-"character": "You",
-"character_replacements": [  ],
+"character": "",
 "inline_mutations": [  ],
 "next_id": "10",
 "pauses": {
 },
 "replacements": [  ],
 "speeds": [  ],
-"text": "aAA?!",
+"text": "It's a...",
 "time": null,
-"translation_key": "aAA?!",
+"translation_key": "It's a...",
 "type": "dialogue"
 }
 }
