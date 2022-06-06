@@ -15,6 +15,11 @@ _global_script_classes=[ {
 "path": "res://old/cg/char/CharacterResource.gd"
 }, {
 "base": "Resource",
+"class": "Context",
+"language": "GDScript",
+"path": "res://01_generic/context.gd"
+}, {
+"base": "Resource",
 "class": "DialogueResource",
 "language": "GDScript",
 "path": "res://addons/dialogue_manager/dialogue_resource.gd"
@@ -22,32 +27,57 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "Entity",
 "language": "GDScript",
-"path": "res://00_generic/entity.gd"
+"path": "res://01_generic/entity.gd"
+}, {
+"base": "Resource",
+"class": "EventResource",
+"language": "GDScript",
+"path": "res://01_generic/event_resource_base.gd"
+}, {
+"base": "Resource",
+"class": "EventRule",
+"language": "GDScript",
+"path": "res://01_generic/event_rule.gd"
+}, {
+"base": "EventRule",
+"class": "EventRuleCausedBy",
+"language": "GDScript",
+"path": "res://03_events/rules/script/caused_by.gd"
+}, {
+"base": "EventRule",
+"class": "EventRuleInitiatedBy",
+"language": "GDScript",
+"path": "res://03_events/rules/script/initiated_by.gd"
 }, {
 "base": "Node2D",
 "class": "Interactable",
 "language": "GDScript",
-"path": "res://00_generic/interactable.gd"
+"path": "res://01_generic/interactable.gd"
 }, {
 "base": "Node",
 "class": "Location",
 "language": "GDScript",
-"path": "res://00_generic/location.gd"
+"path": "res://01_generic/location.gd"
 }, {
 "base": "Node",
 "class": "NodeEvent",
 "language": "GDScript",
-"path": "res://00_generic/node_event.gd"
+"path": "res://01_generic/node_event.gd"
 }, {
 "base": "Node",
 "class": "NodeEventRoot",
 "language": "GDScript",
-"path": "res://00_generic/node_event_root.gd"
+"path": "res://01_generic/node_event_root.gd"
 } ]
 _global_script_class_icons={
 "CharacterResource": "",
+"Context": "",
 "DialogueResource": "",
 "Entity": "",
+"EventResource": "",
+"EventRule": "",
+"EventRuleCausedBy": "",
+"EventRuleInitiatedBy": "",
 "Interactable": "",
 "Location": "",
 "NodeEvent": "",
@@ -57,18 +87,18 @@ _global_script_class_icons={
 [application]
 
 config/name="Project Companion PoC"
-run/main_scene="res://01_concrete/scenes/sandbox.tscn"
+run/main_scene="res://09_scenes/sandbox.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-ResourceDB="*res://02_globals/resource_db.gd"
-EventManager="*res://02_globals/event_manager.gd"
-EventDB="*res://02_globals/event_db.gd"
-CGManager="*res://02_globals/cg_manager.gd"
+ResourceDB="*res://08_globals/resource_db.gd"
+EventManager="*res://08_globals/event_manager.gd"
+EventDB="*res://08_globals/event_db.gd"
+CGManager="*res://08_globals/cg_manager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-WorldState="*res://02_globals/world_state.gd"
-Utility="*res://02_globals/utility.gd"
+WorldState="*res://08_globals/world_state.gd"
+Utility="*res://08_globals/utility.gd"
 
 [display]
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://00_generic/town.gd" type="Script" id=1]
-[ext_resource path="res://01_concrete/scenes/location_test.tscn" type="PackedScene" id=2]
-[ext_resource path="res://01_concrete/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://01_generic/town.gd" type="Script" id=1]
+[ext_resource path="res://09_scenes/location_test.tscn" type="PackedScene" id=2]
+[ext_resource path="res://02_objects/player.tscn" type="PackedScene" id=4]
 
 [node name="Town" type="Node"]
 script = ExtResource( 1 )

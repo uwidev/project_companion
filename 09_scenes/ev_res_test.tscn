@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://02_objects/entities/player/player_sanbox.tscn" type="PackedScene" id=1]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node
+
+var ev : EventResource
+
+func _ready():
+	var player = get_child(0)
+	
+	ev = load(\"res://03_events/test.tres\")
+	var ctx := Context.new()
+	ctx.setup(player, player)
+
+	ev.safe_trigger(ctx)
+"
+
+[node name="Node" type="Node"]
+script = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+is_player = true
