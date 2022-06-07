@@ -1,6 +1,6 @@
 class_name Interactable
 extends Node2D
-# A thing that can be interacted with.
+# A thing that can be interacted with. Should be a child of an object or entity.
 #
 # Has an array events that references the various events that are to be
 # triggered from this intereaction.
@@ -8,6 +8,7 @@ extends Node2D
 
 # Signals
 signal interacted
+
 
 # Vairables
 var _is_interactable := false
@@ -22,7 +23,7 @@ func interact(other) -> bool:
 
 # Private
 func _update_event_reference():
-	events = EventDB.db['interact'][name]
+	events = EventDB.db['interact'][get_parent().name]
 	
 func _can_be_interacted_by(other):
 	# Must be overridden by the child script.
@@ -38,16 +39,18 @@ func _interact(other):
 	
 	if _can_be_interacted_by(other):
 		var possible_events = []
-		var ctx = [other, self]
+		var ctx = Context.new()
+		
+		ctx.setup(get_parent(), other)
 		
 		for event in events:
-			var ev = event.get_valid_event(ctx)
-			if ev:
-				possible_events.append(ev)
+			if event.can_trigger_from(ctx):
+				possible_events.append(event)
 
-		possible_events.shuffle() # shuffle for more random fun!
-		possible_events.sort_custom(self, "_event_priority_cmp")
-		possible_events.front().trigger(ctx)
+		if !possible_events.empty():
+			possible_events.shuffle() # shuffle for more random fun!
+			possible_events.sort_custom(self, "_event_priority_cmp")
+			possible_events.front().trigger(ctx)
 
 func _event_priority_cmp(a, b):
 	return a.get_priority() > b.get_priority()

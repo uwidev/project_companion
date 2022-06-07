@@ -32,7 +32,7 @@ func interact_with(other):
 
 func add_seen(ev:String):
 	seen.append(ev)
+	print(seen)
 	
-func has_seen(ev) -> bool:
-	var ev_ = ev.hash()
-	return ev_ in seen
+func has_seen(ev:String) -> bool:
+	return ev in seen

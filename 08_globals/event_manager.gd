@@ -16,45 +16,38 @@ extends Node
 
 
 # Variables
-var processing_events = false
+var processing_events = false  # why do you have this?
 
 
 # Public
-func on_successful_event(ctx:Array):
+func on_successful_event(ctx:Context):
 	# To allow events to occur after events.
 	#
-	# cataches "event_finished" from events
+	# catches "event_finished" from events
 	if !processing_events:
 		processing_events = true
 		var event_queue = []
 		
-		event_queue.append_array(_get_valid_events(ctx))
+		event_queue.append_array(get_triggered_events(ctx))
+		print(event_queue)
 
 		while !event_queue.empty():
 			event_queue.shuffle() # shuffle for more random fun!
 			event_queue.sort_custom(self, "_event_priority_cmp")
-			for e in event_queue:
-				print(e.get_priority(), " ", e.get_full_name())
-			
 			var ev = event_queue.pop_front()
 			
 			ev.trigger(ctx)
 			ctx = yield(ev, "event_finished")
 
-			event_queue.append_array(_get_valid_events(ctx))
+			event_queue.append_array(get_triggered_events(ctx))
 
 		processing_events = false
 
-
-# Private
-func _get_valid_events(ctx:Array) -> Array:
+func get_triggered_events(ctx:Context):
 	var ret = []
-	
-	for event in EventDB.db["event"]:
-		var ev = event.get_valid_event(ctx)
-		if ev:
-			ret.append(ev)
-			
+	for event in EventDB.db['event']:
+		if event.can_trigger_from(ctx):
+			ret.append(event)
 	return ret
 
 func _event_priority_cmp(a, b):

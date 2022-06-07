@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://01_generic/event_resource.gd" type="Script" id=1]
+[ext_resource path="res://04_dialogue/post_opening_END.tres" type="Resource" id=2]
+[ext_resource path="res://03_events/rules/initiated_by_pillow.tres" type="Resource" id=3]
+[ext_resource path="res://03_events/rules/caused_by_player.tres" type="Resource" id=4]
+[ext_resource path="res://03_events/rules/just_triggered_opening.tres" type="Resource" id=5]
+
+[resource]
+script = ExtResource( 1 )
+name = "event_triggered"
+oneshot = true
+trigger_by = 1
+dialogue = ExtResource( 2 )
+title = "main"
+priority = 0
+rules = [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 5 ) ]
