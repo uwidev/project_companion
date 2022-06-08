@@ -49,10 +49,15 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://03_events/rules/script/initiated_by.gd"
 }, {
-"base": "Resource",
+"base": "EventRule",
 "class": "EventRuleJustTriggered",
 "language": "GDScript",
 "path": "res://03_events/rules/script/just_triggered.gd"
+}, {
+"base": "EventRule",
+"class": "EventRuleRequiresEvent",
+"language": "GDScript",
+"path": "res://03_events/rules/script/seen_event.gd"
 }, {
 "base": "Node2D",
 "class": "Interactable",
@@ -84,11 +89,20 @@ _global_script_class_icons={
 "EventRuleCausedBy": "",
 "EventRuleInitiatedBy": "",
 "EventRuleJustTriggered": "",
+"EventRuleRequiresEvent": "",
 "Interactable": "",
 "Location": "",
 "NodeEvent": "",
 "NodeEventRoot": ""
 }
+
+[addons]
+
+instance_dock/scenes=[ {
+"name": "Test",
+"scenes": [  ],
+"scroll": 0
+} ]
 
 [application]
 
@@ -116,7 +130,12 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg", "res://addons/imrp/plugin.cfg" )
+
+[global]
+
+"code font"=false
+font=false
 
 [input]
 

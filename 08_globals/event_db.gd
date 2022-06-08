@@ -25,29 +25,29 @@ func _ready():
 
 
 # Private
-func _build_resource_db():
-	var dir_string = "res://03_events"
+func _build_resource_db() -> void:
+	var dir_string := "res://03_events"
 	var dir := Directory.new()
 	if dir.open(dir_string) != OK:
-		return {}
+		return
 		
 	if dir.list_dir_begin() != OK:
 		dir.list_dir_end()
-		return {}
+		return
 
 	# Populate dictionary	
-	var filename = dir.get_next()
+	var filename := dir.get_next()
 	while filename != "":
 		if filename.ends_with(".tres"):
 			# Instance the node and let it init itself
-			var ev_res : EventResource = load(dir_string.plus_file(filename))
+			var ev_res := load(dir_string.plus_file(filename)) as EventResource
 			
 			match ev_res.trigger_by:
 				ev_res.TriggerMethod.INTERACT:
 					var rules = ev_res.rules
 					for rule in rules:
 						if rule is EventRuleInitiatedBy:
-							var ename = rule.entity_name
+							var ename = rule.object_name
 							if !(ename in db['interact']):
 								db['interact'][ename] = []
 							db['interact'][ename].append(ev_res)

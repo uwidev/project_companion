@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://01_generic/location.gd" type="Script" id=1]
+[ext_resource path="res://02_objects/bed/bed.tscn" type="PackedScene" id=2]
 [ext_resource path="res://02_objects/locations/white_bg.png" type="Texture" id=3]
 
 [node name="test_location" type="Node"]
@@ -12,3 +13,6 @@ texture = ExtResource( 3 )
 offset = Vector2( 640, 360 )
 
 [node name="Objects" type="Node" parent="."]
+
+[node name="Bed" parent="Objects" instance=ExtResource( 2 )]
+position = Vector2( 1070, 531 )

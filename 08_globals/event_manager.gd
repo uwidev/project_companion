@@ -20,7 +20,7 @@ var processing_events = false  # why do you have this?
 
 
 # Public
-func on_successful_event(ctx:Context):
+func on_successful_event(ctx):
 	# To allow events to occur after events.
 	#
 	# catches "event_finished" from events
@@ -29,7 +29,6 @@ func on_successful_event(ctx:Context):
 		var event_queue = []
 		
 		event_queue.append_array(get_triggered_events(ctx))
-		print(event_queue)
 
 		while !event_queue.empty():
 			event_queue.shuffle() # shuffle for more random fun!
@@ -43,7 +42,7 @@ func on_successful_event(ctx:Context):
 
 		processing_events = false
 
-func get_triggered_events(ctx:Context):
+func get_triggered_events(ctx):
 	var ret = []
 	for event in EventDB.db['event']:
 		if event.can_trigger_from(ctx):
@@ -51,4 +50,4 @@ func get_triggered_events(ctx:Context):
 	return ret
 
 func _event_priority_cmp(a, b):
-	return a.get_priority() > b.get_priority()
+	return a.priority > b.priority

@@ -1,0 +1,48 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://01_generic/event_resource.gd" type="Script" id=1]
+[ext_resource path="res://03_events/rules/initiated_by_bed.tres" type="Resource" id=2]
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=3]
+[ext_resource path="res://03_events/rules/caused_by_player.tres" type="Resource" id=4]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+syntax_version = 2
+raw_text = "~ main
+
+It's a bed."
+errors = [  ]
+titles = {
+"main": "2"
+}
+lines = {
+"0": {
+"next_id": "2",
+"text": "main",
+"type": "title"
+},
+"2": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "It's a bed.",
+"time": null,
+"translation_key": "It's a bed.",
+"type": "dialogue"
+}
+}
+
+[resource]
+script = ExtResource( 1 )
+active = true
+name = "bed"
+oneshot = false
+trigger_by = 0
+dialogue = SubResource( 1 )
+title = "main"
+priority = 0
+rules = [ ExtResource( 2 ), ExtResource( 4 ) ]

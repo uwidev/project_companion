@@ -4,4 +4,4 @@
 
 [resource]
 script = ExtResource( 1 )
-object_name = "Pillow"
+object_name = "Bed"

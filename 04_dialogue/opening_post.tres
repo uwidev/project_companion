@@ -7,7 +7,8 @@ script = ExtResource( 1 )
 syntax_version = 2
 raw_text = "~ main
 
-(event trigger) 3.5 THE REAL EPILOGUE!!"
+Body Pillow: hooman!
+..."
 errors = [  ]
 titles = {
 "main": "2"
@@ -19,6 +20,20 @@ lines = {
 "type": "title"
 },
 "2": {
+"character": "Body Pillow",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "3",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "hooman!",
+"time": null,
+"translation_key": "hooman!",
+"type": "dialogue"
+},
+"3": {
 "character": "",
 "inline_mutations": [  ],
 "next_id": "",
@@ -26,9 +41,9 @@ lines = {
 },
 "replacements": [  ],
 "speeds": [  ],
-"text": "(event trigger) 3.5 THE REAL EPILOGUE!!",
+"text": "...",
 "time": null,
-"translation_key": "(event trigger) 3.5 THE REAL EPILOGUE!!",
+"translation_key": "...",
 "type": "dialogue"
 }
 }

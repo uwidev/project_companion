@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://01_generic/interactable.gd" type="Script" id=1]
+[ext_resource path="res://02_objects/bed/bed.png" type="Texture" id=2]
+
+[node name="Bed" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Interactable" type="Node2D" parent="."]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Interactable"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Interactable/Area2D"]
+polygon = PoolVector2Array( -192, -130, 3, -133, 216, -4, 215, 122, -9, 103, -182, -68 )
+
+[connection signal="input_event" from="Interactable/Area2D" to="Interactable" method="_on_Area2D_input_event"]

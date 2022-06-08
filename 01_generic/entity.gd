@@ -32,7 +32,12 @@ func interact_with(other):
 
 func add_seen(ev:String):
 	seen.append(ev)
-	print(seen)
 	
 func has_seen(ev:String) -> bool:
 	return ev in seen
+
+func add_seen_event(ev:EventResource):
+	seen.append(ev.name)
+	
+func has_seen_event(ev:EventResource) -> bool:
+	return ev.name in seen

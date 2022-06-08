@@ -53,7 +53,7 @@ func _interact(other):
 			possible_events.front().trigger(ctx)
 
 func _event_priority_cmp(a, b):
-	return a.get_priority() > b.get_priority()
+	return a.priority > b.priority
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	# The way for the player to _interact().

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://04_dialogue/opening_post.tres" type="Resource" id=1]
+[ext_resource path="res://01_generic/event_resource.gd" type="Script" id=2]
+[ext_resource path="res://03_events/rules/caused_by_player.tres" type="Resource" id=3]
+[ext_resource path="res://03_events/rules/initiated_by_pillow.tres" type="Resource" id=4]
+
+[resource]
+script = ExtResource( 2 )
+active = true
+name = "Opening Post"
+oneshot = true
+trigger_by = 0
+dialogue = ExtResource( 1 )
+title = "main"
+priority = -1
+rules = [ ExtResource( 3 ), ExtResource( 4 ) ]
