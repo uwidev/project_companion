@@ -21,7 +21,7 @@ Very exciting...
 ...?
 Did I hear something?
 
-~ opening_end
+~ opening_4_END
 ...
 ..
 .
@@ -37,7 +37,7 @@ titles = {
 "opening_1": "1",
 "opening_2": "6",
 "opening_3": "13",
-"opening_end": "17"
+"opening_4_END": "17"
 }
 lines = {
 "0": {
@@ -104,7 +104,7 @@ lines = {
 },
 "16": {
 "next_id": "17",
-"text": "opening_end",
+"text": "opening_4_END",
 "type": "title"
 },
 "17": {

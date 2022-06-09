@@ -9,8 +9,9 @@ extends Node
 
 
 export var is_player := false
-var seen : Array
+export var comfort := 0
 
+var seen : Array
 
 func move_to(location):
 	# Given a location node, try to move this entity into it.
@@ -41,3 +42,7 @@ func add_seen_event(ev:EventResource):
 	
 func has_seen_event(ev:EventResource) -> bool:
 	return ev.name in seen
+
+func mod_comfort(i:int) -> void:
+	comfort += i
+	print(name, " comfort is now ", comfort)

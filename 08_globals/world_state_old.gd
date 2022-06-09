@@ -7,42 +7,30 @@ signal day_advanced
 
 enum DAYWEEK {MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY}
 
-var time_in_day := 100
-var daytime_threshold := 70
+export var max_phase : int = 2
 
 var day : int
 var time : int
 var dayweek : int
 
 func _ready():
-	time = 0
+	time = 1
 	day = 1
 	dayweek = 1
 #	print("Time is now %s" % time)
 
-func advance_time(amount : int) -> void:
-	if time < daytime_threshold and time + amount >= daytime_threshold:
-		time = 70
-		emit_signal("phase_advanced")
-	elif time + amount >= time_in_day:
-		time = 0
+func advance_time():
+	if time + 1 > max_phase:
+		time = 1
 		emit_signal("phase_advanced")
 		_advance_day()		
 	else:
-		time += amount
-#	print("Time is now %s" % time)
-
-func end_phase() -> void:
-	emit_signal("phase_advanced")
-	if time < daytime_threshold:
-		time = 70
-	else:
-		_advance_day()
-		time = 0
+		time += 1
+		emit_signal("phase_advanced")
 #	print("Time is now %s" % time)
 
 func is_daytime() -> bool:
-	return time < daytime_threshold
+	return time < 4
 	
 func is_evening() -> bool:
 	return !is_daytime()
@@ -55,6 +43,7 @@ func is_weekend() -> bool:
 	
 func _advance_day():
 	day += 1
+#	print("Day is now %s" % day)
 	_advance_dayweek()
 	emit_signal("day_advanced")
 	

@@ -42,9 +42,9 @@ func _build_resource_db() -> void:
 			# Instance the node and let it init itself
 			var ev_res := load(dir_string.plus_file(filename)) as EventResource
 			
-			match ev_res.trigger_by:
+			match ev_res.trigger_type:
 				ev_res.TriggerMethod.INTERACT:
-					var rules = ev_res.rules
+					var rules = ev_res.trigger_rules
 					for rule in rules:
 						if rule is EventRuleInitiatedBy:
 							var ename = rule.object_name
