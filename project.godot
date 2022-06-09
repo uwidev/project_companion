@@ -9,6 +9,36 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Control",
+"class": "Cell",
+"language": "GDScript",
+"path": "res://addons/gd-sheets/scripts/cell_base.gd"
+}, {
+"base": "Cell",
+"class": "CellData",
+"language": "GDScript",
+"path": "res://addons/gd-sheets/scripts/cell_data.gd"
+}, {
+"base": "CellReference",
+"class": "CellHeader",
+"language": "GDScript",
+"path": "res://addons/gd-sheets/scripts/cell_header.gd"
+}, {
+"base": "CellReference",
+"class": "CellID",
+"language": "GDScript",
+"path": "res://addons/gd-sheets/scripts/cell_id.gd"
+}, {
+"base": "CellReference",
+"class": "CellOrigo",
+"language": "GDScript",
+"path": "res://addons/gd-sheets/scripts/cell_origo.gd"
+}, {
+"base": "Cell",
+"class": "CellReference",
+"language": "GDScript",
+"path": "res://addons/gd-sheets/scripts/cell_reference.gd"
+}, {
 "base": "Resource",
 "class": "CharacterResource",
 "language": "GDScript",
@@ -39,25 +69,35 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://01_generic/event_rule.gd"
 }, {
-"base": "EventRule",
+"base": "Reference",
 "class": "EventRuleCausedBy",
 "language": "GDScript",
-"path": "res://03_events/rules/script/caused_by.gd"
+"path": "res://04_rules/script/caused_by.gd"
 }, {
 "base": "EventRule",
 "class": "EventRuleInitiatedBy",
 "language": "GDScript",
-"path": "res://03_events/rules/script/initiated_by.gd"
+"path": "res://04_rules/script/initiated_by.gd"
 }, {
-"base": "EventRule",
+"base": "Reference",
 "class": "EventRuleJustTriggered",
 "language": "GDScript",
-"path": "res://03_events/rules/script/just_triggered.gd"
+"path": "res://04_rules/script/just_triggered.gd"
 }, {
-"base": "EventRule",
+"base": "Reference",
 "class": "EventRuleRequiresEvent",
 "language": "GDScript",
-"path": "res://03_events/rules/script/seen_event.gd"
+"path": "res://04_rules/script/seen_event.gd"
+}, {
+"base": "Reference",
+"class": "GDSUtil",
+"language": "GDScript",
+"path": "res://addons/gd-sheets/scripts/utility.gd"
+}, {
+"base": "Reference",
+"class": "GDSheets",
+"language": "GDScript",
+"path": "res://addons/gd-sheets/scripts/GDSheets.gd"
 }, {
 "base": "Node2D",
 "class": "Interactable",
@@ -78,8 +118,39 @@ _global_script_classes=[ {
 "class": "NodeEventRoot",
 "language": "GDScript",
 "path": "res://01_generic/node_event_root.gd"
+}, {
+"base": "Reference",
+"class": "SheetDataHandler",
+"language": "GDScript",
+"path": "res://addons/gd-sheets/scripts/sheet_data_handler.gd"
+}, {
+"base": "Reference",
+"class": "SheetDocumentsHandler",
+"language": "GDScript",
+"path": "res://addons/gd-sheets/scripts/sheet_document_handler.gd"
+}, {
+"base": "Control",
+"class": "SheetGridContainer",
+"language": "GDScript",
+"path": "res://addons/gd-sheets/scripts/grid_area.gd"
+}, {
+"base": "Reference",
+"class": "SheetGridHandler",
+"language": "GDScript",
+"path": "res://addons/gd-sheets/scripts/sheet_grid_handler.gd"
+}, {
+"base": "Resource",
+"class": "SheetsDataDocument",
+"language": "GDScript",
+"path": "res://addons/gd-sheets/data_document.gd"
 } ]
 _global_script_class_icons={
+"Cell": "",
+"CellData": "",
+"CellHeader": "",
+"CellID": "",
+"CellOrigo": "",
+"CellReference": "",
 "CharacterResource": "",
 "Context": "",
 "DialogueResource": "",
@@ -90,10 +161,17 @@ _global_script_class_icons={
 "EventRuleInitiatedBy": "",
 "EventRuleJustTriggered": "",
 "EventRuleRequiresEvent": "",
+"GDSUtil": "",
+"GDSheets": "",
 "Interactable": "",
 "Location": "",
 "NodeEvent": "",
-"NodeEventRoot": ""
+"NodeEventRoot": "",
+"SheetDataHandler": "",
+"SheetDocumentsHandler": "",
+"SheetGridContainer": "",
+"SheetGridHandler": "",
+"SheetsDataDocument": ""
 }
 
 [addons]
@@ -130,7 +208,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg", "res://addons/imrp/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg", "res://addons/gd-sheets/plugin.cfg", "res://addons/imrp/plugin.cfg" )
 
 [global]
 

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=3 format=2]
 
 [ext_resource path="res://old/interactables/companion/events/opening_1/rules.gd" type="Script" id=1]
-[ext_resource path="res://04_dialogue/opening_dialogue.tres" type="Resource" id=2]
+[ext_resource path="res://05_dialogue/opening_dialogue.tres" type="Resource" id=2]
 
 [resource]
 script = ExtResource( 1 )

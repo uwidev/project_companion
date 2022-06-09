@@ -1,4 +1,3 @@
-series,sequence,trigger_by,from,with,cond
-opening,1,interaction,player,pillow,not seen
-opening,END,interaction,player,pillow,"not seen, seen opening_1"
-interjection,END,event,player,pillow,just seen opening_1
+event,type,oneshot,rules,priority,execution
+opening_1,INTERACT,TRUE,caused_player;initiated_pillow,0,dialogue opening_1 opening_1
+opening_2,EVENT,TRUE,caused_player;initiated_pillow,0,dialogue opening_2 opening_2

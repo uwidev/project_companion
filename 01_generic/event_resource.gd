@@ -1,4 +1,3 @@
-tool
 class_name EventResource
 extends Resource
 # A base resource-based implementation of events. Real events will have to
@@ -18,33 +17,25 @@ extends Resource
 signal triggered
 signal event_finished
 
-export(String) var test4
-export(String) var test3
-export(String) var test5
-
 enum TriggerMethod {INTERACT, EVENT}
 
-var trigger_active := true
-var trigger_name : String
-var trigger_oneshot = true  # can only be seen by the ctx.cause once?
-var trigger_type : int
-var trigger_rules : Array
+export(bool) var can_trigger = true
+export(bool) var oneshot = true  # can only be seen by the ctx.cause once?
+export(int, "INTERACT", "EVENT") var type
+export(Array, Resource) var rules
 
-var run_dialogue : Resource # DialogueResource
-var run_title := "main"
-var run_priority := 0
+export(int, -9, 9) var priority := 0
+export(Resource) var dialogue : Resource # DialogueResource
+export(String) var title = "main"
 
-var post_advance_time := 0
-var post_end_phase := false
-var post_adjust_comfort := 0
 
-var name : String setget set_ev_name, get_ev_name
-var dialogue : Resource
-var title : String
-var priority : int
-var advance_time : int
-var end_phase : bool
-var comfort : int
+var name  # assigned from EventDB on ready, matches the file name
+#var advance_time : int
+#var end_phase : bool
+#var comfort : int
+#var advance_time := 0
+#var end_phase := false
+#var adjust_comfort := 0
 
 # Built-in
 func _init():
@@ -138,23 +129,17 @@ func _init():
 
 
 # Public
-func set_ev_name(arg):
-	trigger_name = arg
-
-func get_ev_name():
-	return trigger_name
-
 func trigger(ctx):
 	_execute(ctx)
 	_post(ctx)
 	
 func can_trigger_from(ctx) -> bool:
 	# Checks if active
-	if !trigger_active:
+	if !can_trigger:
 		return false
 	
 	# Checks for oneshot
-	if trigger_oneshot:
+	if oneshot:
 		if ctx.cause.has_seen_event(self):
 			return false
 	
@@ -173,7 +158,7 @@ func can_trigger_from(ctx) -> bool:
 			return false
 	
 	# Rule checking
-	for rule in trigger_rules:
+	for rule in rules:
 		if rule is EventRule and rule.has_method("check"):
 			if !(rule.check(ctx)):
 				return false
@@ -197,12 +182,12 @@ func _post(ctx) -> void:
 #	ctx.initiator.add_seen(name)  # maybe we want the initiator to see the scene?
 
 	# Deal with time
-	if end_phase:
-		WorldState.end_phase()
-	else:
-		WorldState.advance_time(advance_time)
+#	if end_phase:
+#		WorldState.end_phase()
+#	else:
+#		WorldState.advance_time(advance_time)
 		
 	# Deal with modifying the ctx.cause's stats
-	ctx.cause.mod_comfort(comfort)
+#	ctx.cause.mod_comfort(comfort)
 	
 	emit_signal("event_finished", ctx)

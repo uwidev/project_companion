@@ -1,0 +1,49 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+syntax_version = 2
+raw_text = "~ main
+
+Body Pillow: hooman!
+..."
+errors = [  ]
+titles = {
+"main": "2"
+}
+lines = {
+"0": {
+"next_id": "2",
+"text": "main",
+"type": "title"
+},
+"2": {
+"character": "Body Pillow",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "3",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "hooman!",
+"time": null,
+"translation_key": "hooman!",
+"type": "dialogue"
+},
+"3": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "...",
+"time": null,
+"translation_key": "...",
+"type": "dialogue"
+}
+}
