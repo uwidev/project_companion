@@ -1,8 +1,0 @@
-[gd_resource type="Resource" load_steps=3 format=2]
-
-[ext_resource path="res://04_rules/script/seen_event.gd" type="Script" id=1]
-[ext_resource path="res://03_events/opening_4_end.tres" type="Resource" id=2]
-
-[resource]
-script = ExtResource( 1 )
-event = ExtResource( 2 )

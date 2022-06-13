@@ -23,13 +23,14 @@ func interact(other) -> bool:
 
 # Private
 func _update_event_reference():
-	events = EventDB.db['interact'][get_parent().name]
-	
+	if get_parent().name in EventDB.db['interact']:
+		events = EventDB.db['interact'][get_parent().name]
+
 func _can_be_interacted_by(other):
 	# Must be overridden by the child script.
 	# This will define constraints on what and how this can be intereacted.
 	return true
-	
+
 func _interact(other):
 	# Called by the other(?), passing themselves into the function.
 	#

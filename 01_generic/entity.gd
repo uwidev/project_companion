@@ -42,6 +42,9 @@ func add_seen_event(ev:EventResource):
 	
 func has_seen_event(ev:EventResource) -> bool:
 	return ev.name in seen
+	
+func has_seen_event_name(ev:String) -> bool:
+	return ev in seen
 
 func mod_comfort(i:int) -> void:
 	comfort += i

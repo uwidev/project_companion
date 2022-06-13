@@ -60,6 +60,21 @@ _global_script_classes=[ {
 "path": "res://01_generic/entity.gd"
 }, {
 "base": "Resource",
+"class": "EventExecute",
+"language": "GDScript",
+"path": "res://01_generic/event_execute.gd"
+}, {
+"base": "Reference",
+"class": "EventExecuteAddSeen",
+"language": "GDScript",
+"path": "res://05_executions/add_seen.gd"
+}, {
+"base": "Reference",
+"class": "EventExecuteDialogue",
+"language": "GDScript",
+"path": "res://05_executions/dialogue.gd"
+}, {
+"base": "Resource",
 "class": "EventResource",
 "language": "GDScript",
 "path": "res://01_generic/event_resource.gd"
@@ -72,22 +87,22 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "EventRuleCausedBy",
 "language": "GDScript",
-"path": "res://04_rules/script/caused_by.gd"
+"path": "res://04_rules/caused_by.gd"
 }, {
 "base": "EventRule",
 "class": "EventRuleInitiatedBy",
 "language": "GDScript",
-"path": "res://04_rules/script/initiated_by.gd"
+"path": "res://04_rules/initiated_by.gd"
 }, {
 "base": "Reference",
 "class": "EventRuleJustTriggered",
 "language": "GDScript",
-"path": "res://04_rules/script/just_triggered.gd"
+"path": "res://04_rules/just_triggered.gd"
 }, {
-"base": "Reference",
+"base": "EventRule",
 "class": "EventRuleRequiresEvent",
 "language": "GDScript",
-"path": "res://04_rules/script/seen_event.gd"
+"path": "res://04_rules/seen_event.gd"
 }, {
 "base": "Reference",
 "class": "GDSUtil",
@@ -155,6 +170,9 @@ _global_script_class_icons={
 "Context": "",
 "DialogueResource": "",
 "Entity": "",
+"EventExecute": "",
+"EventExecuteAddSeen": "",
+"EventExecuteDialogue": "",
 "EventResource": "",
 "EventRule": "",
 "EventRuleCausedBy": "",
@@ -192,11 +210,14 @@ config/icon="res://icon.png"
 
 ResourceDB="*res://08_globals/resource_db.gd"
 EventManager="*res://08_globals/event_manager.gd"
-EventDB="*res://08_globals/event_db.gd"
 CGManager="*res://08_globals/cg_manager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 WorldState="*res://08_globals/world_state.gd"
 Utility="*res://08_globals/utility.gd"
+RulesDb="*res://08_globals/rules_db.gd"
+ExecutionDb="*res://08_globals/execution_db.gd"
+DialogueDb="*res://08_globals/dialogue_db.gd"
+EventDB="*res://08_globals/event_db.gd"
 
 [display]
 
@@ -208,7 +229,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg", "res://addons/gd-sheets/plugin.cfg", "res://addons/imrp/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg", "res://addons/imrp/plugin.cfg" )
 
 [global]
 
