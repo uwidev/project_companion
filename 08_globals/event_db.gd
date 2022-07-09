@@ -17,11 +17,10 @@ signal references_updated
 func _init():
 	db["interact"] = {}
 	db["event"] = []
+	db["choice"] = {}
 	
 func _ready():
 	_build_resource_db()
-	
-	pass
 
 
 # Public
@@ -92,7 +91,7 @@ func _build_resource_db() -> void:
 		dir.list_dir_end()
 		return
 
-	# Populate db	
+	# Populate db
 	var filename := dir.get_next()
 	while filename != "":
 		if filename.ends_with(".gd"):
@@ -114,7 +113,17 @@ func _build_resource_db() -> void:
 				
 				ev_res.TriggerMethod.EVENT:
 					db['event'].append(ev_res)
-					
+				
+				ev_res.TriggerMethod.CHOICE:
+					var rules = ev_res._rules
+					for rule in rules:
+						if rule[0] is EventRuleInitiatedBy:
+							var ename = rule[1][0]
+							if !(ename in db['choice']):
+								db['choice'][ename] = []
+							db['choice'][ename].append(ev_res)
+							break
+				
 		filename = dir.get_next()
 	dir.list_dir_end()
 

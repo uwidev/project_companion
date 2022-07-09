@@ -1,3 +1,0 @@
-event,type,oneshot,rules,priority,execution
-opening_1,INTERACT,TRUE,caused_player;initiated_pillow,0,dialogue opening_1 opening_1
-opening_2,EVENT,TRUE,caused_player;initiated_pillow,0,dialogue opening_2 opening_2

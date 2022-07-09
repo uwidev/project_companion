@@ -1,9 +1,11 @@
 extends EventResource
 
 func _init():
-	name = "trigger_event"
-	oneshot = true
-	type = TriggerMethod.EVENT
+	can_trigger = true
+	name = "pillow_greeting"
+	alias = ""
+	oneshot = false
+	type = TriggerMethod.INTERACT
 	
 	rules_str = """
 			caused_by Player
@@ -13,7 +15,7 @@ func _init():
 	priority = 0
 	
 	exec_str = """
-			dialogue trigger_event main
+			dialogue pillow_greetings main
 			add_seen
 			"""
 			

@@ -2,8 +2,8 @@ extends EventResource
 
 func _init():
 	can_trigger = true
-	name = "opening_2"
-	alias = "Touch again..."
+	name = "opening_1_1"
+	alias = "bleh"
 	oneshot = true
 	type = TriggerMethod.CHOICE
 	
@@ -15,10 +15,10 @@ func _init():
 	priority = 0
 	
 	exec_str = """
-			dialogue opening opening_2
+			dialogue opening opening_1
 			add_seen
-			mod_stat pow 10
-			advance_time 50
+			mod_stat pow 20
+			advance_time 30
 			"""
 	
 	# Don't change anything below this point.

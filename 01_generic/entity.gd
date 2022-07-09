@@ -8,10 +8,22 @@ extends Node
 # That will be controlled by the player's behavior or on AI.
 
 
+const stat_min = 0
+const stat_max = 100
+
 export var is_player := false
-export var comfort := 0
+
+export var flux := 0
+export var mood := 0
+export var money := 0
+
+export(int, 0, 100) var power := 0 setget set_pow
+export(int, 0, 100) var vitality := 0 setget set_vit
+export(int, 0, 100) var agility := 0 setget set_agi
+export(int, 0, 100) var discipline := 0 setget set_dis
 
 var seen : Array
+
 
 func move_to(location):
 	# Given a location node, try to move this entity into it.
@@ -24,9 +36,10 @@ func move_to(location):
 	if res[0]:
 		get_parent().remove_child(self)
 		location.add_child(self)
-		print("Moved into location %s" % location.name)
+#		print("Moved into location %s" % location.name)
 	else:
-		print(res[1])
+#		print(res[1])
+		pass
 
 func interact_with(other):
 	pass
@@ -46,6 +59,19 @@ func has_seen_event(ev:EventResource) -> bool:
 func has_seen_event_name(ev:String) -> bool:
 	return ev in seen
 
-func mod_comfort(i:int) -> void:
-	comfort += i
-	print(name, " comfort is now ", comfort)
+func set_pow(p):
+	var tmp = power + p
+	power = clamp(tmp, stat_min, stat_max) as int
+#	print("power is now %s" % power)
+
+func set_vit(v):
+	var tmp = vitality + v
+	vitality = clamp(tmp, stat_min, stat_max) as int
+
+func set_agi(a):
+	var tmp = agility + a
+	agility = clamp(tmp, stat_min, stat_max) as int
+
+func set_dis(d):
+	var tmp = discipline + d
+	discipline = clamp(tmp, stat_min, stat_max) as int

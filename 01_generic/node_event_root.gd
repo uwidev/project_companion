@@ -52,7 +52,7 @@ func get_series_name() -> String:
 
 # Virutal
 func _span_conditions(ctx) -> bool:
-	print(get_instance_id())
+#	print(get_instance_id())
 	return true
 
 

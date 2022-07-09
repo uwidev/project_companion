@@ -7,7 +7,7 @@ script = ExtResource( 1 )
 syntax_version = 2
 raw_text = "~ main
 
-Triggered from event!"
+It appears to be a body pillow..."
 errors = [  ]
 titles = {
 "main": "2"
@@ -26,9 +26,9 @@ lines = {
 },
 "replacements": [  ],
 "speeds": [  ],
-"text": "Triggered from event!",
+"text": "It appears to be a body pillow...",
 "time": null,
-"translation_key": "Triggered from event!",
+"translation_key": "It appears to be a body pillow...",
 "type": "dialogue"
 }
 }

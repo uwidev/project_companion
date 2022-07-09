@@ -11,6 +11,7 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 
 [node name="Interactable" parent="." instance=ExtResource( 3 )]
+player_has_choice = true
 
 [node name="CollisionPolygon2D" parent="Interactable/Area2D" index="0"]
 polygon = PoolVector2Array( -61, -95, 74, -99, 50, 112, -71, 91 )

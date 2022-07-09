@@ -3,22 +3,23 @@ extends Resource
 # A base resource-based implementation of events. Real events will have to
 # extend from this and override virtual functions.
 
+
 signal triggered
 signal event_finished
 
-enum TriggerMethod {INTERACT, EVENT}
+enum TriggerMethod {INTERACT, EVENT, CHOICE}
 
 var can_trigger = true
 var name : String
+var alias : String
 var oneshot = true  # can only be seen by the ctx.cause once?
 var type : int
 var rules_str : String
 var priority := 0
-#var dialogue : Resource # DialogueResource
 var exec_str : String
 
 var _rules : Array # of Rules
-var _exec : Array # of Statements
+var _exec : Array # of executions
 
 
 # Built-in
@@ -29,14 +30,19 @@ func _init():
 func trigger(ctx : Context):
 	ctx.event_stack.append(self)
 	
-	for statement in _exec:
-		var f = statement[0].execute(ctx, statement[1]) 
+	for exec in _exec:
+		# Index 0 is the function, index 1 is the arguments
+		# Note that arguments will ALWAYS be in the form of a string. It is up
+		# to the execution script to determine what to to with it.
+		var f = exec[0].execute(ctx, exec[1]) 
 		if f is GDScriptFunctionState and f.is_valid():  # For dealing with co-routines
 			yield(f, "completed")
 	
 	emit_signal("event_finished", ctx)
 	
 func can_trigger_from(ctx) -> bool:
+	# Events always have innate checking for event series.
+	
 	# Checks if active
 	if !can_trigger:
 		return false

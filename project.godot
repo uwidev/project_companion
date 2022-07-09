@@ -64,12 +64,17 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://01_generic/event_execute.gd"
 }, {
-"base": "Reference",
+"base": "EventExecute",
 "class": "EventExecuteAddSeen",
 "language": "GDScript",
 "path": "res://05_executions/add_seen.gd"
 }, {
-"base": "Reference",
+"base": "EventExecute",
+"class": "EventExecuteAdvanceTime",
+"language": "GDScript",
+"path": "res://05_executions/advance_time.gd"
+}, {
+"base": "EventExecute",
 "class": "EventExecuteDialogue",
 "language": "GDScript",
 "path": "res://05_executions/dialogue.gd"
@@ -172,6 +177,7 @@ _global_script_class_icons={
 "Entity": "",
 "EventExecute": "",
 "EventExecuteAddSeen": "",
+"EventExecuteAdvanceTime": "",
 "EventExecuteDialogue": "",
 "EventResource": "",
 "EventRule": "",
@@ -218,6 +224,7 @@ RulesDb="*res://08_globals/rules_db.gd"
 ExecutionDb="*res://08_globals/execution_db.gd"
 DialogueDb="*res://08_globals/dialogue_db.gd"
 EventDB="*res://08_globals/event_db.gd"
+UI="*res://07_ui/UI.tscn"
 
 [display]
 

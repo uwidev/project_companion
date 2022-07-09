@@ -3,6 +3,7 @@ extends EventResource
 func _init():
 	can_trigger = true
 	name = ""
+	alias = ""
 	oneshot = true
 	type = TriggerMethod.INTERACT
 	

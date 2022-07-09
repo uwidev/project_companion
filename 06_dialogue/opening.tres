@@ -61,7 +61,7 @@ lines = {
 "10": {
 "character": "",
 "inline_mutations": [  ],
-"next_id": "end",
+"next_id": "",
 "pauses": {
 },
 "replacements": [  ],
@@ -92,7 +92,7 @@ lines = {
 "14": {
 "character": "",
 "inline_mutations": [  ],
-"next_id": "end",
+"next_id": "",
 "pauses": {
 },
 "replacements": [  ],
@@ -257,7 +257,7 @@ lines = {
 "3": {
 "character": "",
 "inline_mutations": [  ],
-"next_id": "end",
+"next_id": "",
 "pauses": {
 },
 "replacements": [  ],

@@ -3,8 +3,9 @@ extends EventResource
 func _init():
 	can_trigger = true
 	name = "opening_1"
+	alias = "Touch"
 	oneshot = true
-	type = TriggerMethod.INTERACT
+	type = TriggerMethod.CHOICE
 	
 	rules_str = """
 			caused_by Player
@@ -16,6 +17,8 @@ func _init():
 	exec_str = """
 			dialogue opening opening_1
 			add_seen
+			mod_stat pow 20
+			advance_time 30
 			"""
 			
 	# Don't change anything below this point.

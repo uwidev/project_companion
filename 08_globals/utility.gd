@@ -5,8 +5,9 @@ const RULES_DIR = "res://04_rules/"
 const EXECUTIONS_DIR = "res://05_executions/"
 const DIALOGUE_DIR = "res://06_dialogue/"
 
+const main_theme = preload("res://07_ui/main_theme.tres")
 
-func path_res_ref(path : String, suffix : String = ".tres") -> Dictionary:
+static func path_res_ref(path : String, suffix : String = ".tres") -> Dictionary:
 	var ret = {}
 	
 	var dir := Directory.new()
@@ -28,8 +29,7 @@ func path_res_ref(path : String, suffix : String = ".tres") -> Dictionary:
 
 	return ret
 
-
-func path_gd_to_res_ref(path : String, suffix : String = ".gd") -> Dictionary:
+static func path_gd_to_res_ref(path : String, suffix : String = ".gd") -> Dictionary:
 	var ret = {}
 	
 	var dir := Directory.new()
@@ -51,3 +51,8 @@ func path_gd_to_res_ref(path : String, suffix : String = ".gd") -> Dictionary:
 	dir.list_dir_end()
 
 	return ret
+
+static func remove_all_children(node: Node):
+	for n in node.get_children():
+		node.remove_child(n)
+		n.queue_free()

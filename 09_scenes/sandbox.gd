@@ -1,4 +1,5 @@
 extends Node
 
 func _ready():
-	print(EventDB.db)
+#	print(EventDB.db)
+	pass

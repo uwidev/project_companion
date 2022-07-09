@@ -16,15 +16,17 @@ extends Node
 
 
 # Variables
+signal event_stack_finished
+
 var processing_events = false  # why do you have this?
 
 
 # Public
-func on_successful_event(ctx):
+func on_successful_event(ctx:Context):
 	# To allow events to occur after events.
 	#
-	# catches "event_finished" from events
-	if !processing_events:
+	# catches "event_finished" from events, but ignores interact events
+	if !processing_events and !(ctx.event_stack.back().type == EventResource.TriggerMethod.INTERACT):
 		processing_events = true
 		var event_queue = []
 		
@@ -41,6 +43,8 @@ func on_successful_event(ctx):
 			event_queue.append_array(get_triggered_events(ctx))
 
 		processing_events = false
+
+	emit_signal("event_stack_finished")
 
 func get_triggered_events(ctx):
 	var ret = []

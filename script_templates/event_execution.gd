@@ -1,4 +1,8 @@
 extends EventExecute
+# Description
+# 
+# Syntax: func args
 
-func execute(args : Array) -> void:
+
+func execute(ctx : Context, args : Array) -> void:
 	pass

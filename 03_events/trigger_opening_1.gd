@@ -2,23 +2,20 @@ extends EventResource
 
 func _init():
 	can_trigger = true
-	name = "opening_2"
-	alias = "Touch again..."
+	name = "trigger_opening_1"
+	alias = ""
 	oneshot = true
-	type = TriggerMethod.CHOICE
+	type = TriggerMethod.EVENT
 	
 	rules_str = """
 			caused_by Player
-			initiated_by Pillow
 			"""
 	
 	priority = 0
 	
 	exec_str = """
-			dialogue opening opening_2
+			dialogue opening opening_3
 			add_seen
-			mod_stat pow 10
-			advance_time 50
 			"""
 	
 	# Don't change anything below this point.

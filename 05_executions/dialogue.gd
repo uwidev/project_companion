@@ -1,5 +1,9 @@
 class_name EventExecuteDialogue
 extends EventExecute
+# Given a dialogue resource string, queries for it and runs it.
+# 
+# Syntax: dialogue <name> <title>
+
 
 func execute(ctx : Context, args : Array) -> void:
 	var dialogue_name = args[0]
